@@ -75,4 +75,6 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", path: "provision_root.sh"
+  config.vm.provision "shell", path: "provision_node.sh", :privileged => false
 end
